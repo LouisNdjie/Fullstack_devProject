@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Banhschrift;
+}
+body{
+    display: flex;
+    width: auto;
+    height: 100vh;
+    background: url('/IMG-20250210-WA0121.jpg') center no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #ae5e2c;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+header h1{
+    color: white;
+    font-family: Avigea;
+}
+header a{
+    justify-self: flex-start;
+    margin-left: 6px;
+}
