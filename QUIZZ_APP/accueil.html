@@ -1,26 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> ma page d'accueil</title>
+	<title>accueil</title>
 	<link rel="stylesheet" href="style/accueil.css">
+	<script src="JS/main.js"></script>
 </head>
 <body>
 	<!--l'entete de ma page web-->
 	<header>
-	<!--titre et menu de navigarion-->
-	<h1>WELCOME TO QUIZ APP</h1><br>
-	<a href="formulaire.html">formulaire</a><br>
-	<a href="quiz.html">commencer le quiz</a><br>
-	<a href="score.html">score</a><br>
+		<!--titre et menu de navigarion-->
+		<h1>WELCOME TO QUIZ APP</h1>
+		<div class="nav">
+			<a onclick="openform(),forminscript()">formulaire</a>
+			<a href="quiz.html">commencer le quiz</a>
+			<a href="score.html">score</a>
+		</div>
 	</header>
 	<main>
 		<section>
-			<p>ce site vous permet de participer a<br> 
-			un quiz et de voir votre score apres avoir<br>
+			<p>Ce site vous permet de participer a 
+			un quiz et de voir votre score apres avoir
 			eventuellement entrer quelques informations sur vous</p>
+			<a onclick="openform(),forminscript()">go QUIZ</a>
 		</section>
+		<div id="hide">
+			<div class="content">
+				<div id="inscription">
+					<form action="SERVER/inscription.php" method="post"></form>
+						<h1>Inscription</h1>
+						<div class="input-box">
+							<p>Pseudo</p>
+							<input type="text" name="" id="">
+						</div>
+						<div class="input-box">
+							<p>E-mail</p>
+							<input type="email" name="" id="">
+						</div>
+						<div class="input-box">
+							<p>password</p>
+							<input type="password" name="" id="">
+						</div>
+						<div class="button-box">
+							<input type="submit" value="S'incrire">
+						</div>
+						<div class="button-box">
+							<a onclick="closeinscript(),formcon()">se connecter</a>
+						</div>
+					</form>
+				</div>
+				<div id="connexion">
+					<form action="SERVER/connexion.php" method="post"></form>
+						<h1>Connexion</h1>
+						<div class="input-box">
+							<p>E-mail</p>
+							<input type="email" name="" id="">
+						</div>
+						<div class="input-box">
+							<p>password</p>
+							<input type="password" name="" id="">
+						</div>
+						<div class="button-box">
+							<a onclick="closecon(),forminscript()">s'incrire</a>
+						</div>
+						<div class="button-box">
+							<input type="submit" value="Se connecter">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer>
-		<p>&copy; mon site web</p>
+		<p>&copy;Quiz APP web site</p><br>
+		<code>Auhtor: Louis NDZIE, MOUDIBE MARTIN, ANGES, Beginsan, Emmanuel Fotso, Mackzedzoa</code>
 	</footer>
 	
